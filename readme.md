@@ -11,25 +11,20 @@
 ## 2. Clean the Data
 
 * As the `contacts.csv` has lot of unwanted data, we should clean the data.
-* Run the following command in the root path (Command Prompt)
-```bash
-python clean_data.py
+* On Windows, run this from Command Prompt in the project folder:
+```bat
+prepare_contacts.bat
 ```
-* This will create a file `wedding_guests.csv` in the root folder
-
+* This runs the cleanup and phone-number extraction, then copies the numbers to `validate_wp/numbers.txt`.
+* The script requires Python and `pandas`. It creates or replaces `wedding_guests.csv`, `phone_numbers.txt`, and `validate_wp/numbers.txt`.
 
 ## 3. Get the Guests numbers
-* Run the following command in the root path (Command Prompt)
-```bash
-python getNumber.py
-```
-* This will create a file `phone_numbers.txt` with the list of phone numbers
+* The batch file above also creates `phone_numbers.txt` with the list of phone numbers.
 
 
 ## 4. Validate the whatsapp numbers
 * We need to validate that the numbers with the whatsapp
-* Create a file named `numbers.txt` under the folder `validate_wp`
-* Copy and paste the values from `phone_numbers.txt` to `numbers.txt`
+* The batch file above prepares `validate_wp/numbers.txt` from `phone_numbers.txt`.
 * Run the following commands in the folder path: `validate_wp`
 ```bash
 npm install
@@ -38,6 +33,7 @@ npm install
 node bulk_check.js
 ```
 * This will create the file `valid_numbers.txt` - The list of numbers in whatsapp
+* The invaild numbers stays in the `numbers.txt`, meaning after execution the `numbers.txt` contains only the invalid numbers
 
 ## 5. Manually delete the data
 * Delete the contacts that are non-whatsapp number in the `wedding_guests.csv` with the help of the log from the previous step
