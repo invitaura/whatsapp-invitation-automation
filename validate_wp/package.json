@@ -1,0 +1,9 @@
+{
+  "name": "validate_wp",
+  "version": "1.0.0",
+  "type": "module", 
+  "dependencies": {
+    "qrcode-terminal": "^0.12.0",
+    "whatsapp-web.js": "^1.26.0"
+  }
+}
