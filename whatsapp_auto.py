@@ -94,7 +94,7 @@ input("\n👉 Once your chats are fully loaded on screen, press ENTER here to st
 
 print("\n🚀 Authentication passed! Initializing transmission cycle...")
 
-df = pd.read_csv("muki_wedding_guests_copy.csv", dtype={"Phone": str})
+df = pd.read_csv("wedding_guests.csv", dtype={"Phone": str})
 
 for index, row in df.iterrows():
     phone = str(row["Phone"]).strip().replace("+", "")  

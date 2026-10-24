@@ -43,4 +43,4 @@ output_df.to_csv("wedding_guests.csv", index=False)
 
 print("📊 Cleaned Sheet Preview:")
 print(output_df.head(7))
-print(f"\n🎉 Successfully processed {len(output_df)} contacts into 'wedding_guests.xlsx'!")
+print(f"\n🎉 Successfully processed {len(output_df)} contacts into 'wedding_guests.csv'!")

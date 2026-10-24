@@ -1,6 +1,6 @@
 import csv
 
-with open('muki_wedding_guests.csv', 'r') as csvfile:
+with open('wedding_guests.csv', 'r') as csvfile:
     reader = csv.DictReader(csvfile)
     phones = [row['Phone'].strip() for row in reader]
 
