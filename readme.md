@@ -11,20 +11,25 @@
 ## 2. Clean the Data
 
 * As the `contacts.csv` has lot of unwanted data, we should clean the data.
-* On Windows, run this from Command Prompt in the project folder:
-```bat
-prepare_contacts.bat
+* Run the following command in the root path (Command Prompt)
+```bash
+python clean_data.py
 ```
-* This runs the cleanup and phone-number extraction, then copies the numbers to `validate_wp/numbers.txt`.
-* The script requires Python and `pandas`. It creates or replaces `wedding_guests.csv`, `phone_numbers.txt`, and `validate_wp/numbers.txt`.
+* This will create a file `wedding_guests.csv` in the root folder
+
 
 ## 3. Get the Guests numbers
-* The batch file above also creates `phone_numbers.txt` with the list of phone numbers.
+* Run the following command in the root path (Command Prompt)
+```bash
+python getNumber.py
+```
+* This will create a file `phone_numbers.txt` with the list of phone numbers
 
 
 ## 4. Validate the whatsapp numbers
 * We need to validate that the numbers with the whatsapp
-* The batch file above prepares `validate_wp/numbers.txt` from `phone_numbers.txt`.
+* Create a file named `numbers.txt` under the folder `validate_wp`
+* Copy and paste the values from `phone_numbers.txt` to `numbers.txt`
 * Run the following commands in the folder path: `validate_wp`
 ```bash
 npm install
